@@ -2,6 +2,7 @@ package com.sm.fsm.model.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -31,4 +32,7 @@ public class Order extends AbstractEntity {
 	@OneToOne
 	@JoinColumn(name = "SHIP_ADDRESS_ID")
 	private ShipAddress shipAddress;
+	
+	@Column(name = "ACCOUNT_ID")
+	private String accountId;
 }

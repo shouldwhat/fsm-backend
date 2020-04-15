@@ -12,6 +12,10 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+
+@Getter(AccessLevel.PUBLIC)
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractEntity {
@@ -19,7 +23,7 @@ public abstract class AbstractEntity {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	private String id;
+	protected String id;
 	
 	@CreatedDate
 	private LocalDateTime createTime;

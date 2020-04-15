@@ -6,10 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @ToString
 @Getter
@@ -49,4 +53,9 @@ public class Account extends AbstractEntity {
 	
 	@OneToMany(mappedBy = "account")
 	private List<ShoppingList> shoppingList;
+	
+	@Builder
+	public Account(String id) {
+		this.id = id;
+	}
 }
