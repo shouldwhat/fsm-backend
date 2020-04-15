@@ -1,4 +1,4 @@
-package com.sm.fsm.domain.wishList;
+package com.sm.fsm.domain.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
