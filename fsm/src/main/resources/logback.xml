@@ -11,8 +11,12 @@
 		</encoder>
 	</appender>
 
+	<!-- SQL Parameter logging 
+	<logger name="org.hibernate.type" level="trace" />
+	-->
+	<logger name="com.sm.fsm" level="debug" />
 
-	<root level="INFO">
+	<root level="info">
 		<appender-ref ref="STDOUT" />
 	</root>
 
