@@ -3,7 +3,6 @@ package com.sm.fsm.model.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
@@ -29,7 +28,7 @@ public class Product extends AbstractEntity {
 //	@OneToMany(mappedBy = "product")
 //	private List<ProductPropertyTr> productPropertyTr;
 	
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany//(fetch = FetchType.EAGER)
 	@JoinColumn(name = "PRODUCT_ID")
 	private List<ProductPropertyTr> productPropertyTr;
 	
