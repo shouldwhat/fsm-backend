@@ -30,11 +30,7 @@ public class Account extends AbstractEntity {
 	
 	@OneToMany
 	@JoinColumn(name = "ACCOUNT_ID")
-	private List<WishList> wishList;
-
-	@OneToMany
-	@JoinColumn(name = "ACCOUNT_ID")
-	private List<ShoppingList> shoppingList;
+	private List<ProductReview> productReviews;
 	
 	@OneToMany
 	@JoinColumn(name = "ACCOUNT_ID")
@@ -47,4 +43,10 @@ public class Account extends AbstractEntity {
 	@OneToMany
 	@JoinColumn(name = "ACCOUNT_ID")
 	private List<Comment> comments;
+	
+	@OneToMany(mappedBy = "account")
+	private List<WishList> wishList;
+	
+	@OneToMany(mappedBy = "account")
+	private List<ShoppingList> shoppingList;
 }

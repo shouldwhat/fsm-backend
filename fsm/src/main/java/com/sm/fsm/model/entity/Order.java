@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity(name = "tm_order")
 public class Order extends AbstractEntity {
@@ -13,7 +14,14 @@ public class Order extends AbstractEntity {
 	@JoinColumn(name = "ORDER_ID")
 	private List<OrderHistory> orderHistories;
 	
-	@OneToMany
-	@JoinColumn(name = "ORDER_ID")
+	@OneToMany(mappedBy = "order")
 	private List<OrderProduct> orderProduct;
+	
+	@OneToOne
+	@JoinColumn(name = "PAYMENT_OPTION_ID")
+	private PaymentOption paymentOption;
+	
+	@OneToOne
+	@JoinColumn(name = "SHIP_ADDRESS_ID")
+	private ShipAddress shipAddress;
 }

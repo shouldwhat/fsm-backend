@@ -12,4 +12,8 @@ public class Product extends AbstractEntity {
 	@OneToMany
 	@JoinColumn(name = "PRODUCT_ID")
 	private List<ProductReview> proudctReviews;
+	
+	
+	@OneToMany(mappedBy = "product")
+	private List<ProductPropertyTr> productPropertyTr;
 }
