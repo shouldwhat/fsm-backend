@@ -7,6 +7,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+
+@Builder
+@ToString
+@Getter
 @Entity(name = "tm_order")
 public class Order extends AbstractEntity {
 
