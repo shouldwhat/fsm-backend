@@ -1,23 +1,50 @@
 package com.sm.fsm.model.entity;
 
-import javax.persistence.Entity;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
-@Getter
+@Builder
 @ToString
+@Getter
 @Entity(name = "tm_account")
 public class Account extends AbstractEntity {
 
-	private String test;
-	private String name;
+	@OneToMany// (fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<ShipAddress> shipAddresses;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<PaymentOption> paymentOptions;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<Order> orders;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<WishList> wishList;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<ShoppingList> shoppingList;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<Coupon> coupons;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<Board> boards;
+	
+	@OneToMany
+	@JoinColumn(name = "ACCOUNT_ID")
+	private List<Comment> comments;
 }
