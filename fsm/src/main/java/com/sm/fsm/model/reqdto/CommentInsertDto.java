@@ -1,5 +1,6 @@
 package com.sm.fsm.model.reqdto;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 

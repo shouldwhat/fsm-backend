@@ -12,6 +12,7 @@ import lombok.ToString;
 @Builder
 public class ShipAddress extends AbstractDomain {
 
+	private String id;
 	private String userId;
 	private String address;
 	private String name;
@@ -26,9 +27,10 @@ public class ShipAddress extends AbstractDomain {
 				.build();
 	}
 	
-	public static ShipAddress from(String userId, ShipAddressUpdateDto dto) {
+	public static ShipAddress from(String userId, String shipAddressId, ShipAddressUpdateDto dto) {
 		return ShipAddress.builder()
 				.userId(userId)
+				.id(shipAddressId)
 				.name(dto.getName())
 				.phone(dto.getPhone())
 				.build();

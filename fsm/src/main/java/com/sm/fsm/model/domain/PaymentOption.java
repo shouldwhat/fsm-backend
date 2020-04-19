@@ -13,6 +13,7 @@ import lombok.ToString;
 @Builder
 public class PaymentOption extends AbstractDomain {
 
+	private String id;
 	private String userId;
 	private String name;
 	private String displayName;
@@ -36,16 +37,18 @@ public class PaymentOption extends AbstractDomain {
 				.build();
 	}
 	
-	public static PaymentOption from(String userId, PaymentOptionUpdateDto dto) {
+	public static PaymentOption from(String userId, String id, PaymentOptionUpdateDto dto) {
 		return PaymentOption.builder()
 				.userId(userId)
+				.id(id)
 				.displayName(dto.getDisplayName())
 				.build();
 	}
 	
-	public static PaymentOption from(String userId, PaymentOptionWithdrawDto dto) {
+	public static PaymentOption from(String userId, String id, PaymentOptionWithdrawDto dto) {
 		return PaymentOption.builder()
 				.userId(userId)
+				.id(id)
 				.amount(dto.getAmount())
 				.build();
 	}

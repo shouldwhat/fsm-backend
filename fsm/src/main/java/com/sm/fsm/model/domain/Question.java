@@ -12,6 +12,7 @@ import lombok.ToString;
 @Builder
 public class Question extends AbstractDomain {
 
+	private String id;
 	private String userId;
 	private String title;
 	private String content;
@@ -24,9 +25,10 @@ public class Question extends AbstractDomain {
 				.build();
 	}
 	
-	public static Question from(String userId, QuestionUpdateDto dto) {
+	public static Question from(String userId, String questionId, QuestionUpdateDto dto) {
 		return Question.builder()
 				.userId(userId)
+				.id(questionId)
 				.title(dto.getTitle())
 				.content(dto.getContent())
 				.build();
