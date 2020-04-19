@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sm.fsm.model.domain.PaymentOptionType;
 import com.sm.fsm.model.reqdto.PaymentOptionInsertDto;
 import com.sm.fsm.model.reqdto.PaymentOptionUpdateDto;
 import com.sm.fsm.model.reqdto.PaymentOptionWithdrawDto;
