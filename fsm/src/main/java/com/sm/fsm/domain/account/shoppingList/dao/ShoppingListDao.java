@@ -1,4 +1,4 @@
-package com.sm.fsm.domain.account;
+package com.sm.fsm.domain.account.shoppingList.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

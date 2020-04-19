@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sm.fsm.TAbstractDao;
-import com.sm.fsm.domain.account.AccountDao;
+import com.sm.fsm.domain.account.account.dao.AccountDao;
 import com.sm.fsm.model.entity.Account;
 
 public class TAccountDao extends TAbstractDao {
