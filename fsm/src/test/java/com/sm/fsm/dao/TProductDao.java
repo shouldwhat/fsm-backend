@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sm.fsm.TAbstractDao;
-import com.sm.fsm.domain.product.ProductDao;
+import com.sm.fsm.domain.product.product.dao.ProductDao;
 import com.sm.fsm.model.entity.Product;
 
 public class TProductDao extends TAbstractDao {

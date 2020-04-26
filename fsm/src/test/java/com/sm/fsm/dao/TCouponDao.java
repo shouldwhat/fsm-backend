@@ -10,7 +10,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sm.fsm.TAbstractDao;
-import com.sm.fsm.domain.coupon.CouponDao;
+import com.sm.fsm.domain.coupon.dao.CouponDao;
 import com.sm.fsm.model.entity.Coupon;
 import com.sm.fsm.model.entity.enumeration.CouponType;
 

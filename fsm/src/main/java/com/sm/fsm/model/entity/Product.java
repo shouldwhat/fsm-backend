@@ -23,7 +23,7 @@ public class Product extends AbstractEntity {
 
 	private String name;
 	private String description;
-	private String descriptionS;
+	private String descriptionSimple;
 	private boolean isPosting;
 	private boolean canUseCoupon;
 	private boolean canFreeShipping;
