@@ -12,4 +12,7 @@ import lombok.ToString;
 @Entity(name = "tm_board_attachment_file")
 public class BoardAttachmentFile extends AbstractEntity {
 
+	private String name;
+	private String path;
+	private String type;
 }

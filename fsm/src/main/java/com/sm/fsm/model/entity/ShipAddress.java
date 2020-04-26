@@ -13,6 +13,10 @@ import lombok.ToString;
 @Entity(name = "tm_ship_address")
 public class ShipAddress extends AbstractEntity {
 
+	private String name;
+	private String address;
+	private String phone;
+	
 	@Column(name = "ACCOUNT_ID")
 	private String accountId;
 }

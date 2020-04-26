@@ -2,8 +2,6 @@ package com.sm.fsm.dao;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,7 +14,7 @@ public class TAccountDao extends TAbstractDao {
 	@Autowired
 	private AccountDao accountDao;
 	
-//	@Test
+	@Test
 	public void save() {
 		
 		Account account = Account.builder()
@@ -26,8 +24,8 @@ public class TAccountDao extends TAbstractDao {
 		LOG.debug("account => {}", account);
 	}
 	
-	@Test
-	@Transactional
+//	@Test
+//	@Transactional
 	public void findOne() {
 		
 		String id = "fd523355-cc78-4ab5-a45b-3644405da7a2";

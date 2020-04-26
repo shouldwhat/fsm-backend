@@ -1,5 +1,6 @@
 package com.sm.fsm.model.entity;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -20,6 +21,20 @@ import lombok.ToString;
 @Entity(name = "tm_product")
 public class Product extends AbstractEntity {
 
+	private String name;
+	private String description;
+	private String descriptionS;
+	private boolean isPosting;
+	private boolean canUseCoupon;
+	private boolean canFreeShipping;
+	private long price;
+	private LocalDateTime salesStartTime;
+	private LocalDateTime salesEndTime;
+	private long discount;
+	private LocalDateTime discountStartTime;
+	private LocalDateTime discountEndTime;
+	private long maxCount;
+	
 	@OneToMany
 	@JoinColumn(name = "PRODUCT_ID")
 	private List<ProductReview> proudctReviews;

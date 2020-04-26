@@ -14,6 +14,8 @@ import lombok.ToString;
 @Entity(name = "tr_order_product")
 public class OrderProduct extends AbstractEntity {
 
+	private long count;
+	
 	@ManyToOne
 	@JoinColumn(name = "ORDER_ID")
 	private Order order;

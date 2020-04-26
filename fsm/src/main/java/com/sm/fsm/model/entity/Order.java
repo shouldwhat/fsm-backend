@@ -1,5 +1,6 @@
 package com.sm.fsm.model.entity;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -18,6 +19,12 @@ import lombok.ToString;
 @Entity(name = "tm_order")
 public class Order extends AbstractEntity {
 
+	private String invoiceNumber;
+	private String code;
+	private String orderRequirement;
+	private String shippingRequirement;
+	private LocalDateTime desireShippingTime;
+	
 	@OneToMany
 	@JoinColumn(name = "ORDER_ID")
 	private List<OrderHistory> orderHistories;

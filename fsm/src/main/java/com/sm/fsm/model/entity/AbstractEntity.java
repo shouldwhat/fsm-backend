@@ -14,8 +14,10 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter(AccessLevel.PUBLIC)
+@ToString
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractEntity {

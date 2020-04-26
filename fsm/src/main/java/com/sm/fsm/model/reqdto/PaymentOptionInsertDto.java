@@ -1,6 +1,6 @@
 package com.sm.fsm.model.reqdto;
 
-import com.sm.fsm.model.domain.PaymentOptionType;
+import com.sm.fsm.model.entity.enumeration.PaymentOptionType;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -18,6 +18,6 @@ public class PaymentOptionInsertDto extends AbstractRequestDto {
 	private PaymentOptionType type;
 	
 	public void setType(String type) {
-		this.type = PaymentOptionType.from(type);
+		this.type = PaymentOptionType.valueOf(type);
 	}
 }

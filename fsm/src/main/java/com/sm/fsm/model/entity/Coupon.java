@@ -7,7 +7,7 @@ import javax.persistence.Convert;
 import javax.persistence.Entity;
 
 import com.sm.fsm.model.entity.enumeration.CouponType;
-import com.sm.fsm.model.entity.enumeration.CouponTypeConverter;
+import com.sm.fsm.model.entity.enumeration.converter.CouponTypeConverter;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,6 +28,7 @@ public class Coupon extends AbstractEntity {
 	private LocalDateTime startTime;
 	private LocalDateTime expireTime;
 
+	// https://galid1.tistory.com/572
 	@Convert(converter = CouponTypeConverter.class)
 	private CouponType type;
 	

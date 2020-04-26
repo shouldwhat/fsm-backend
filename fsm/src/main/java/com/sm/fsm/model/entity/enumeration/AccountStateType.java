@@ -5,9 +5,8 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum CouponType {
-	
-	PERCENTAGE,
-	PRICE,
+public enum AccountStateType {
+
+	OK,
 	;
 }

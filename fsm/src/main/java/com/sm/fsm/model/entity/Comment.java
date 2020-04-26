@@ -17,6 +17,8 @@ import lombok.ToString;
 @Entity(name = "tm_comment")
 public class Comment extends AbstractEntity {
 
+	private String content;
+	
 	@Column(name = "ACCOUNT_ID")
 	private String accountId;
 	

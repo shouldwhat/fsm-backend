@@ -13,6 +13,9 @@ import lombok.ToString;
 @Entity(name = "tm_product_review")
 public class ProductReview extends AbstractEntity {
 
+	private String title;
+	private String content;
+	
 	@Column(name = "ACCOUNT_ID")
 	private String accountId;
 }

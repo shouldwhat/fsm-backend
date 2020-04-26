@@ -1,5 +1,6 @@
 package com.sm.fsm.model.domain;
 
+import com.sm.fsm.model.entity.enumeration.PaymentOptionType;
 import com.sm.fsm.model.reqdto.PaymentOptionInsertDto;
 import com.sm.fsm.model.reqdto.PaymentOptionUpdateDto;
 import com.sm.fsm.model.reqdto.PaymentOptionWithdrawDto;
